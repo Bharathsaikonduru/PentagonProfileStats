@@ -459,3 +459,129 @@
 2026-01-19 09:50:18 INFO  PPS05TestCaseAppsMade:67 - Class : BaseTestCase | Method : driverSetup | In Remote Execution (Grid) | Selected Browser : 'chrome'
 2026-01-19 09:50:23 INFO  PPS04TestCaseWebsitesDeveloped:55 - Class : BaseTestCase | Method : driverSetup | In Remote Execution (Grid) | Selected OS Platform : 'windows'
 2026-01-19 09:50:23 INFO  PPS04TestCaseWebsitesDeveloped:71 - Class : BaseTestCase | Method : driverSetup | In Remote Execution (Grid) | Selected Browser : 'edge'
+2026-01-23 11:57:09 INFO  PPS01TestCaseNameField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 11:57:15 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Konduru Bharath Sai'
+2026-01-23 11:57:16 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='pavan789823'
+2026-01-23 11:57:17 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Dhruv~!?_'
+2026-01-23 11:57:18 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='पसन्द'
+2026-01-23 11:57:18 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='భారత'
+2026-01-23 11:57:19 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='சாய்'
+2026-01-23 11:57:19 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Maheshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh'
+2026-01-23 11:57:20 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='1.23457E+115'
+2026-01-23 11:57:21 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='!@#$%^&*()!@#$%^&*()!@#$%^&*()!@#$%^&*(!@*(!@#$%^&{:>}!@#$%^&*()!@#$%^&*(@#$%^&*(@#$%^&*@#$%^&*@#$%^&'
+2026-01-23 11:59:06 INFO  PPS01TestCaseNameField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 11:59:11 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Konduru Bharath Sai'
+2026-01-23 11:59:12 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='pavan789823'
+2026-01-23 11:59:13 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Dhruv~!?_'
+2026-01-23 11:59:14 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='पसन्द'
+2026-01-23 11:59:14 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='భారత'
+2026-01-23 11:59:15 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='சாய்'
+2026-01-23 11:59:16 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Maheshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh'
+2026-01-23 11:59:17 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='1.23457E+115'
+2026-01-23 11:59:18 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='!@#$%^&*()!@#$%^&*()!@#$%^&*()!@#$%^&*(!@*(!@#$%^&{:>}!@#$%^&*()!@#$%^&*(@#$%^&*(@#$%^&*@#$%^&*@#$%^&'
+2026-01-23 11:59:37 INFO  PPS02TestCaseYearsOfExperienceField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:00:00 INFO  PPS03TestCaseSkillsField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:00:31 INFO  PPS04TestCaseWebsitesDeveloped:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:00:56 INFO  PPS05TestCaseAppsMade:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:01:14 INFO  PPS06TestCaseUiValidation:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:01:22 INFO  PPS07TestCaseProfileAnalysis:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:01:30 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Santhosh' - Years of Experience : '1 Year' - Skills : 'React' - Websites Developed : '1' - Apps Made : '2'
+2026-01-23 12:01:33 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:01:33 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:01:34 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Naveen' - Years of Experience : '2 Years' - Skills : 'Java' - Websites Developed : '1' - Apps Made : '2'
+2026-01-23 12:01:36 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:01:36 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:01:36 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Pavan' - Years of Experience : '0 Years' - Skills : 'JavaScript' - Websites Developed : '1' - Apps Made : '3'
+2026-01-23 12:01:39 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:01:39 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:01:39 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Dhruv' - Years of Experience : '5+ Years' - Skills : 'Java,React' - Websites Developed : '5' - Apps Made : '1'
+2026-01-23 12:01:44 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:01:44 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:01:46 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Bharath' - Years of Experience : '3 Years' - Skills : 'Docker,JUnit,Mocha,REST API,Express.js' - Websites Developed : '1' - Apps Made : '1'
+2026-01-23 12:01:55 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:01:55 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:01:56 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Yadav' - Years of Experience : '4 Years' - Skills : 'Spring MVC,Spring Boot,MongoDB,JUnit,Selenium,CSS' - Websites Developed : '6' - Apps Made : '3'
+2026-01-23 12:02:04 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:04 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:05 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Rahul Tripathi' - Years of Experience : '4 Years' - Skills : 'MongoDB,Jest,Java,JSP,HTML' - Websites Developed : '6' - Apps Made : '5'
+2026-01-23 12:02:11 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:11 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:12 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Divya Yadav' - Years of Experience : '1 Year' - Skills : 'SQL,CSS,Flask' - Websites Developed : '1' - Apps Made : '4'
+2026-01-23 12:02:17 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:17 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:18 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Sai Ram Iyengar' - Years of Experience : '4 Years' - Skills : 'Django,HTML,MongoDB' - Websites Developed : '6' - Apps Made : '6'
+2026-01-23 12:02:22 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:22 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:23 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Aditi Banerjee' - Years of Experience : '4 Years' - Skills : 'JSP,Django,JavaScript' - Websites Developed : '3' - Apps Made : '8'
+2026-01-23 12:02:27 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:27 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:29 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Riya Saha' - Years of Experience : '5+ Years' - Skills : 'Spring MVC,Selenium,Angular,Vue,Mocha,Jest' - Websites Developed : '400' - Apps Made : '7'
+2026-01-23 12:02:35 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:35 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:36 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Kavya Naidu' - Years of Experience : '3 Years' - Skills : 'Cypress,React,JUnit,Spring Boot' - Websites Developed : '5' - Apps Made : '6'
+2026-01-23 12:02:41 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:41 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:43 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Akhil Khan' - Years of Experience : '5+ Years' - Skills : 'Mocha,HTML,JSP,Spring Boot,MongoDB' - Websites Developed : '0' - Apps Made : '6'
+2026-01-23 12:02:50 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:50 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:02:52 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Abhinav Bhattacharya' - Years of Experience : '1 Year' - Skills : 'Express.js,CSS,MongoDB,JSP' - Websites Developed : '4' - Apps Made : '6'
+2026-01-23 12:02:59 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:02:59 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:10:51 INFO  PPS01TestCaseNameField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:10:56 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Konduru Bharath Sai'
+2026-01-23 12:10:57 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='pavan789823'
+2026-01-23 12:10:58 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Dhruv~!?_'
+2026-01-23 12:10:59 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='पसन्द'
+2026-01-23 12:10:59 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='భారత'
+2026-01-23 12:11:00 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='சாய்'
+2026-01-23 12:11:01 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='Maheshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh'
+2026-01-23 12:11:01 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='1.23457E+115'
+2026-01-23 12:11:02 INFO  PPS01TestCaseNameField:26 - Test Started : validName | userName Entered ='!@#$%^&*()!@#$%^&*()!@#$%^&*()!@#$%^&*(!@*(!@#$%^&{:>}!@#$%^&*()!@#$%^&*(@#$%^&*(@#$%^&*@#$%^&*@#$%^&'
+2026-01-23 12:11:15 INFO  PPS02TestCaseYearsOfExperienceField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:11:28 INFO  PPS03TestCaseSkillsField:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:11:53 INFO  PPS04TestCaseWebsitesDeveloped:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:12:11 INFO  PPS05TestCaseAppsMade:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:12:29 INFO  PPS06TestCaseUiValidation:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:12:37 INFO  PPS07TestCaseProfileAnalysis:86 - Class : BaseTestCase | Method : driverSetup | In Local Execution | Selected Browser : 'chrome'
+2026-01-23 12:12:44 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Santhosh' - Years of Experience : '1 Year' - Skills : 'React' - Websites Developed : '1' - Apps Made : '2'
+2026-01-23 12:12:47 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:12:47 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:12:48 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Naveen' - Years of Experience : '2 Years' - Skills : 'Java' - Websites Developed : '1' - Apps Made : '2'
+2026-01-23 12:12:50 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:12:50 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:12:51 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Pavan' - Years of Experience : '0 Years' - Skills : 'JavaScript' - Websites Developed : '1' - Apps Made : '3'
+2026-01-23 12:12:53 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:12:53 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:12:55 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Dhruv' - Years of Experience : '5+ Years' - Skills : 'Java,React' - Websites Developed : '5' - Apps Made : '1'
+2026-01-23 12:12:59 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:12:59 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:01 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Bharath' - Years of Experience : '3 Years' - Skills : 'Docker,JUnit,Mocha,REST API,Express.js' - Websites Developed : '1' - Apps Made : '1'
+2026-01-23 12:13:11 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:11 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:12 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Yadav' - Years of Experience : '4 Years' - Skills : 'Spring MVC,Spring Boot,MongoDB,JUnit,Selenium,CSS' - Websites Developed : '6' - Apps Made : '3'
+2026-01-23 12:13:17 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:17 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:18 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Rahul Tripathi' - Years of Experience : '4 Years' - Skills : 'MongoDB,Jest,Java,JSP,HTML' - Websites Developed : '6' - Apps Made : '5'
+2026-01-23 12:13:23 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:23 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:24 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Divya Yadav' - Years of Experience : '1 Year' - Skills : 'SQL,CSS,Flask' - Websites Developed : '1' - Apps Made : '4'
+2026-01-23 12:13:28 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:28 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:29 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Sai Ram Iyengar' - Years of Experience : '4 Years' - Skills : 'Django,HTML,MongoDB' - Websites Developed : '6' - Apps Made : '6'
+2026-01-23 12:13:35 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:35 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:36 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Aditi Banerjee' - Years of Experience : '4 Years' - Skills : 'JSP,Django,JavaScript' - Websites Developed : '3' - Apps Made : '8'
+2026-01-23 12:13:40 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:40 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:41 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Riya Saha' - Years of Experience : '5+ Years' - Skills : 'Spring MVC,Selenium,Angular,Vue,Mocha,Jest' - Websites Developed : '400' - Apps Made : '7'
+2026-01-23 12:13:51 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:51 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:53 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Kavya Naidu' - Years of Experience : '3 Years' - Skills : 'Cypress,React,JUnit,Spring Boot' - Websites Developed : '5' - Apps Made : '6'
+2026-01-23 12:13:58 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:13:58 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:13:59 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Akhil Khan' - Years of Experience : '5+ Years' - Skills : 'Mocha,HTML,JSP,Spring Boot,MongoDB' - Websites Developed : '0' - Apps Made : '6'
+2026-01-23 12:14:05 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:14:05 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
+2026-01-23 12:14:06 INFO  PPS07TestCaseProfileAnalysis:25 - Test Class : PPS07TestCaseProfileAnalysis | Test Started : profileAnalysis | Data Used : user name : 'Abhinav Bhattacharya' - Years of Experience : '1 Year' - Skills : 'Express.js,CSS,MongoDB,JSP' - Websites Developed : '4' - Apps Made : '6'
+2026-01-23 12:14:13 INFO  PPS07TestCaseProfileAnalysis:34 - Clicked on Track Button
+2026-01-23 12:14:13 INFO  PPS07TestCaseProfileAnalysis:35 - waiting for result card Visibility
