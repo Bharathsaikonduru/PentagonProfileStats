@@ -13,7 +13,7 @@ pipeline {
                 // Pull code from GitHub
                 git branch: 'dhruv',
                     url: 'https://github.com/Bharathsaikonduru/PentagonProfileStats.git',
-                    credentialsId: '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'
+                    credentialsId: 'c04cb36d-0465-455b-9a84-5fd45f892069'
             }
         }
 
