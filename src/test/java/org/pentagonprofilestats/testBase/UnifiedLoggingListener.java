@@ -1,4 +1,6 @@
 package org.pentagonprofilestats.testBase;
+import org.pentagonprofilestats.utilities.AIService; // Import your new AI Service
+import org.pentagonprofilestats.testBase.BaseTestCase; // Import BaseTestCase to access the driver
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -100,13 +102,45 @@ public class UnifiedLoggingListener implements IExecutionListener, ISuiteListene
         try {
             long durationMs = duration(result);
             Throwable t = result.getThrowable();
-            // SLF4J: last argument as Throwable is treated as stacktrace
+
+            // 1. Your Existing Standard Logging
             log.error("✗ FAIL {}.{} | duration={} ms | message={}",
                     result.getTestClass().getName(),
                     result.getMethod().getMethodName(),
                     durationMs,
                     (t != null ? t.getMessage() : "no message"),
                     t);
+
+            // 2. New AI Integration Logic
+            try {
+                // We need to get the driver to capture the page source
+                Object currentClass = result.getInstance();
+                String pageSource = "";
+
+                // Check if the test class extends BaseTestCase so we can access 'driver'
+                if (currentClass instanceof BaseTestCase) {
+                    BaseTestCase base = (BaseTestCase) currentClass;
+                    if (base.driver != null) {
+                        try {
+                            pageSource = base.driver.getPageSource();
+                        } catch (Exception e) {
+                            log.warn("Could not capture page source for AI: {}", e.getMessage());
+                        }
+                    }
+                }
+
+                // Call the AI Service
+                if (t != null) {
+                    String aiAnalysis = AIService.analyzeFailure(result.getName(), t, pageSource);
+
+                    // Log the AI Response clearly in the console
+                    log.error("\n================ 🤖 AI ROOT CAUSE ANALYSIS 🤖 ================\n{}\n==============================================================", aiAnalysis);
+                }
+
+            } catch (Exception e) {
+                log.warn("Failed to run AI Analysis: {}", e.getMessage());
+            }
+
         } finally {
             clearMdc();
         }

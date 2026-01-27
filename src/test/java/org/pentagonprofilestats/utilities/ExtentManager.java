@@ -1,4 +1,7 @@
 package org.pentagonprofilestats.utilities;
+import org.pentagonprofilestats.utilities.AIService;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
 import java.awt.Desktop;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -79,22 +82,59 @@ public class ExtentManager extends BaseTestCase implements ITestListener {
         test = extent.createTest(result.getTestClass().getName());
         test.assignCategory(result.getMethod().getGroups());
 
-        test.log(Status.FAIL,result.getName()+" got failed");
-        test.log(Status.INFO, result.getThrowable().getMessage());
+        test.log(Status.FAIL, result.getName() + " got failed");
+
+        // Log the error message
+        Throwable t = result.getThrowable();
+        String errorMessage = (t != null) ? t.getMessage() : "No error message";
+        test.log(Status.INFO, errorMessage);
+
         BaseTestCase base = (BaseTestCase) result.getInstance();
 
+        // ================== 🤖 START AI INTEGRATION ==================
+        try {
+            // 1. Get Page Source safely
+            String pageSource = "";
+            if (base.driver != null) {
+                try {
+                    pageSource = base.driver.getPageSource();
+                } catch (Exception e) {
+                    test.warning("Could not capture page source: " + e.getMessage());
+                }
+            }
+
+            // 2. Call AI Service
+            // We pass the Test Name, the Error, and the Page Source
+            String aiAnalysis = AIService.analyzeFailure(result.getName(), t, pageSource);
+
+            // 3. Display in Report as a Code Block for better visibility
+            if (aiAnalysis != null && !aiAnalysis.isEmpty()) {
+                test.info("<b>🤖 AI Root Cause Analysis:</b>");
+                test.info(MarkupHelper.createCodeBlock(aiAnalysis, CodeLanguage.XML));
+            } else {
+                test.warning("AI Analysis returned no result.");
+            }
+
+        } catch (Exception e) {
+            // If AI fails (e.g., bad Key), don't break the report, just log a warning
+            test.warning("⚠️ AI Analysis failed: " + e.getMessage());
+        }
+        // ================== 🤖 END AI INTEGRATION ==================
+
+        // Existing Screenshot Logic
         try {
             String imgPath = base.takeScreenshot(result.getName());
-            //For Allure
+
+            // Allure Screenshot
             byte[] bytes = base.takeScreenshotForAllure();
             io.qameta.allure.Allure.getLifecycle()
                     .addAttachment("Failure Screenshot", "image/png", "png", bytes);
+
+            // Extent Screenshot
             test.addScreenCaptureFromPath(imgPath);
         } catch (Exception e1) {
             e1.printStackTrace();
         }
-//        logger.info("*** Test Failed *** | Test Class : '{}' | Test Method : '{}'", result.getTestClass().getTestName(), result.getName());
-
     }
 
     public void onTestSkipped(ITestResult result) {
