@@ -123,7 +123,7 @@ public class UnifiedLoggingListener implements IExecutionListener, ISuiteListene
                     if (base.driver != null) {
                         try {
                             pageSource = base.driver.getPageSource();
-                            BaseTestCase.extentTest.info("Page source captured (length=" + pageSource.length() + ")");    
+                            // BaseTestCase.extentTest.info("Page source captured (length=" + pageSource.length() + ")");    
                         } catch (Exception e) {
                             log.warn("Could not capture page source for AI: {}", e.getMessage());
                         }
