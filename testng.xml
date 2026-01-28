@@ -1,6 +1,7 @@
 <suite name="PentagonProfileSuite">
     <listeners>
         <listener class-name="org.pentagonprofilestats.utilities.ExtentManager"/>
+        <listener class-name="org.pentagonprofilestats.testBase.UnifiedLoggingListener"/>
     </listeners>
 
     <test name="PentagonProfileTests">

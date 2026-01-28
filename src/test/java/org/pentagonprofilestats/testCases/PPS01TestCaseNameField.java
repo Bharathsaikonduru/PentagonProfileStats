@@ -1,9 +1,7 @@
 package org.pentagonprofilestats.testCases;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+
 import org.pentagonprofilestats.pageObjects.PPSHomePageObjects;
 import org.pentagonprofilestats.testBase.BaseTestCase;
 import org.testng.Assert;
@@ -29,13 +27,25 @@ public class PPS01TestCaseNameField extends BaseTestCase {
             Assert.assertEquals(homeObj.getUserName(), userName);
 
         }catch (AssertionError e){
-//            logger.error("");
             Assert.fail("Name not valid");
 
         }
     }
 
-    @Test(priority = 2,groups = {"functional", "negative", "name", "alert"} ,dataProvider = "EmptyNameDataProvider",
+    @Test(priority = 2 ,groups = {"smoke", "functional", "negative", "name"} ,dataProvider = "invalidNamesDataProvider",
+            dataProviderClass = org.pentagonprofilestats.utilities.DataProviders.class)
+    public void invalidName(String userName){
+        homeObj.setUserName(userName);
+        try{
+            Assert.assertEquals(homeObj.getUserName(),"");
+        }catch (AssertionError e){
+            Assert.fail("userName should only contains Alphabets");
+        }
+    }
+
+
+
+    @Test(priority = 3,groups = {"functional", "negative", "name", "alert"} ,dataProvider = "EmptyNameDataProvider",
             dataProviderClass = org.pentagonprofilestats.utilities.DataProviders.class)
     @Description("Validating the Alert for Empty Name")
 
@@ -52,6 +62,8 @@ public class PPS01TestCaseNameField extends BaseTestCase {
         nameRequiredAlert.accept();
         Assert.assertEquals(alertMessage,"Name required!");
     }
+
+
 
 
 

@@ -19,7 +19,6 @@ public class PPSHomePageObjects extends BasePageObjectsUtil {
         super(driver, timeouts);
     }
 
-    // -------- Header & Labels (as per your original validation) --------
     @FindBy(xpath = "//div[@class='header']/h1")
     private WebElement headerTitle;
 

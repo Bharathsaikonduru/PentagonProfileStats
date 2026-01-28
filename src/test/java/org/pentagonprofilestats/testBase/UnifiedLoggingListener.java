@@ -6,17 +6,17 @@ import org.slf4j.MDC;
 import org.testng.*;
 
 import java.util.Arrays;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Unified TestNG listener with rich, structured logging:
  * - Suite/Test/Class/Method lifecycle
  * - Parameters, duration, status (PASS/FAIL/SKIP)
  * - Throwable message + stack
- * - MDC tagging for testName and className (use in Logback pattern)
+ * - MDC tagging for testName and className (use in Logback/Log4j2 pattern)
  *
- * Wire via testng.xml <listeners> (see below).
+ * Wire via testng.xml <listeners> or @Listeners on a base class.
  */
 public class UnifiedLoggingListener implements IExecutionListener, ISuiteListener,
         ITestListener, IInvokedMethodListener {
@@ -54,8 +54,8 @@ public class UnifiedLoggingListener implements IExecutionListener, ISuiteListene
         log.info("🧪 TEST BLOCK START: {} | XmlTestName='{}' | IncludedGroups={} | ExcludedGroups={}",
                 context.getName(),
                 context.getCurrentXmlTest() != null ? context.getCurrentXmlTest().getName() : "N/A",
-                Arrays.toString(context.getIncludedGroups()),
-                Arrays.toString(context.getExcludedGroups()));
+                safeGroups(context.getIncludedGroups()),
+                safeGroups(context.getExcludedGroups()));
     }
 
     @Override
@@ -79,52 +79,65 @@ public class UnifiedLoggingListener implements IExecutionListener, ISuiteListene
         log.info("▶ START {}.{}({})",
                 result.getTestClass().getName(),
                 result.getMethod().getMethodName(),
-                Arrays.toString(result.getParameters()));
+                safeParams(result.getParameters()));
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        long durationMs = duration(result);
-        log.info("✓ PASS {}.{} | duration={} ms",
-                result.getTestClass().getName(),
-                result.getMethod().getMethodName(),
-                durationMs);
-        clearMdc();
+        try {
+            long durationMs = duration(result);
+            log.info("✓ PASS {}.{} | duration={} ms",
+                    result.getTestClass().getName(),
+                    result.getMethod().getMethodName(),
+                    durationMs);
+        } finally {
+            clearMdc();
+        }
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        long durationMs = duration(result);
-        Throwable t = result.getThrowable();
-        log.error("✗ FAIL {}.{} | duration={} ms | message={}",
-                result.getTestClass().getName(),
-                result.getMethod().getMethodName(),
-                durationMs,
-                t != null ? t.getMessage() : "no message",
-                t);
-        clearMdc();
+        try {
+            long durationMs = duration(result);
+            Throwable t = result.getThrowable();
+            // SLF4J: last argument as Throwable is treated as stacktrace
+            log.error("✗ FAIL {}.{} | duration={} ms | message={}",
+                    result.getTestClass().getName(),
+                    result.getMethod().getMethodName(),
+                    durationMs,
+                    (t != null ? t.getMessage() : "no message"),
+                    t);
+        } finally {
+            clearMdc();
+        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        long durationMs = duration(result);
-        Throwable t = result.getThrowable();
-        log.warn("⧗ SKIP {}.{} | duration={} ms | reason={}",
-                result.getTestClass().getName(),
-                result.getMethod().getMethodName(),
-                durationMs,
-                t != null ? t.getMessage() : "no reason");
-        clearMdc();
+        try {
+            long durationMs = duration(result);
+            Throwable t = result.getThrowable();
+            log.warn("⧗ SKIP {}.{} | duration={} ms | reason={}",
+                    result.getTestClass().getName(),
+                    result.getMethod().getMethodName(),
+                    durationMs,
+                    (t != null ? t.getMessage() : "no reason"));
+        } finally {
+            clearMdc();
+        }
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        long durationMs = duration(result);
-        log.warn("⚠ Within success percentage {}.{} | duration={} ms",
-                result.getTestClass().getName(),
-                result.getMethod().getMethodName(),
-                durationMs);
-        clearMdc();
+        try {
+            long durationMs = duration(result);
+            log.warn("⚠ Within success percentage {}.{} | duration={} ms",
+                    result.getTestClass().getName(),
+                    result.getMethod().getMethodName(),
+                    durationMs);
+        } finally {
+            clearMdc();
+        }
     }
 
     // -------------------- Invocation (before/after each method, incl. config methods) --------------------
@@ -148,15 +161,27 @@ public class UnifiedLoggingListener implements IExecutionListener, ISuiteListene
     }
 
     // -------------------- Helpers --------------------
+    private static String safeParams(Object[] params) {
+        return Arrays.toString(params != null ? params : new Object[]{});
+    }
+
+    private static String safeGroups(String[] groups) {
+        return Arrays.toString(groups != null ? groups : new String[]{});
+    }
+
     private String methodKey(ITestResult result) {
         return result.getTestClass().getName() + "#" + result.getMethod().getMethodName()
-                + Arrays.toString(result.getParameters());
+                + safeParams(result.getParameters());
     }
 
     private long duration(ITestResult result) {
         Long start = startTimes.remove(methodKey(result));
         long end = System.currentTimeMillis();
-        return (start != null) ? (end - start) : (end - result.getStartMillis());
+        if (start != null) {
+            return end - start;
+        }
+        long startMillis = result.getStartMillis();
+        return (startMillis > 0) ? (end - startMillis) : 0L;
     }
 
     private String statusName(int status) {

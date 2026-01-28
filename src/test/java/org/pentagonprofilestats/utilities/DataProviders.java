@@ -17,6 +17,13 @@ public class DataProviders {
         return validNamesData;
     }
 
+    @DataProvider(name = "invalidNamesDataProvider")
+    public Object[][] invalidName() throws Exception {
+        Object[][] invalidNameData = excelDataProvider
+                .getData("testData/DataToValidateNameFieldNegativeTestCase.xlsx", "Sheet1");
+        return invalidNameData;
+    }
+
     @DataProvider(name = "EmptyNameDataProvider")
     public Object[][] emptyName() throws IOException {
         Object[][] emptyName = excelDataProvider

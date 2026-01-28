@@ -28,9 +28,15 @@ public class PPS04TestCaseWebsitesDeveloped extends BaseTestCase {
     @Description("Negative Numerics are not allowed but it is accepting")
     @Severity(SeverityLevel.CRITICAL)
     public void validateNegativeTestCasesOfWebsitesDevelopedField(String noOfWebsitesDeveloped){
-        homeObj.setWebsitesDeveloped(noOfWebsitesDeveloped);
-        takeScreenshotForAllure();
-        Assert.assertEquals(homeObj.getWebSitesDeveloped(), "", "Should only accept positive numeric value");
+        try{
+            homeObj.setWebsitesDeveloped(noOfWebsitesDeveloped);
+            takeScreenshotForAllure();
+            Assert.assertEquals(homeObj.getWebSitesDeveloped(), "", "Should only accept positive numeric value");
+        }catch(AssertionError e){
+            logger.info("Test Failed | TestCase : PPS04TestCaseWebsitesDeveloped | Test Method : validateNegativeTestCasesOfWebsitesDevelopedField | Negative numeric value is not accepted as expected");
+            Assert.fail("Should only accept positive numeric value");
+        }
+
     }
 
 
